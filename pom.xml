@@ -29,6 +29,11 @@
 	<properties>
 		<java.version>21</java.version>
 	</properties>
+	<properties>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -96,6 +101,15 @@
 	<build>
 		<plugins>
 			<plugin>
+		            <groupId>org.apache.maven.plugins</groupId>
+		            <artifactId>maven-compiler-plugin</artifactId>
+		            <version>3.11.0</version> 
+			<configuration>
+		                <source>21</source>
+		                <target>21</target>
+        	       </configuration>
+        	       </plugin>
+<!-- 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
@@ -106,7 +120,8 @@
 						</exclude>
 					</excludes>
 				</configuration>
-			</plugin>
+			</plugin> -->
+			
 		</plugins>
 	</build>
 
